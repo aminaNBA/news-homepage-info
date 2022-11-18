@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="/normalize.css" />
+
+    <!-- Font Awesome Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MAIN FILE CSS -->
+    <link rel="stylesheet" href="./scss/style.css" />
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- NAVBAR SECTION -->
+      <nav class="navbar">
+        <div class="navbar__logo"><img src="./assets/images/logo.svg" alt="logo" /></div>    
+        <ul class="navbar__links">
+          <li class="navbar__link"><a href="#">Home</a></li>
+          <li class="navbar__link"><a href="">New</a></li>
+          <li class="navbar__link"><a href="#">Popular</a></li>
+          <li class="navbar__link"><a href="#">Trending</a></li>
+          <li class="navbar__link"><a href="#">Categories</a></li>
+        </ul>   
+        <button class="burger">
+          <span class="bar"></span>  
+        </button>   
+      </nav>
+
+      <!-- HERO SECTION -->
+      <main class="hero">
+        <div class="brand">
+          <img
+            src="./assets/images/image-web-3-desktop.jpg"
+            alt="image-web-3-desktop"
+          />
+          <div class="describe">
+            <div class="title">
+              <h1>The Bright Future of Web 3.0?</h1>
+            </div>
+            <div class="details">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button>READ MORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="news">
+          <h2>New</h2>
+          <div class="new">
+            <h4>Hydrogen VS Electric Cars</h4>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <div class="new">
+            <h4>The Downsides of AI Artistry</h4>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="new">
+            <h4>Is VC Funding Drying Up?</h4>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER SECTION -->
+      <footer class="footer">
+        <div class="boxes">
+          <div class="box-image">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="image1" />
+          </div>
+          <div class="best-newsletter">
+            <div class="order">01</div>
+            <div class="title">Reviving Retro PCs</div>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="box-image">
+            <img src="./assets/images/image-top-laptops.jpg" alt="image2" />
+          </div>
+          <div class="best-newsletter">
+            <div class="order">02</div>
+            <div class="title">Reviving Retro PCs</div>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="box-image">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="image3" />
+          </div>
+          <div class="best-newsletter">
+            <div class="order">03</div>
+            <div class="title">Reviving Retro PCs</div>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">AMINA NBA</a>.
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

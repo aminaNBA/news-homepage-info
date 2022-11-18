@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+p {
+  line-height: 1.4rem;
+}
+
+.container {
+  padding: 3rem 10rem;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Basic style */
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: white;
+}
+.navbar__links {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+  .navbar__links {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: hsl(240deg, 100%, 5%);
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+}
+.navbar__link {
+  padding: 0 10px;
+}
+.navbar__link > a {
+  color: hsl(240deg, 100%, 5%);
+  text-decoration: none;
+}
+.navbar__link > a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+
+.burger {
+  display: none;
+}
+
+/*  Small device */
+@media screen and (max-width: 768px) {
+  .navbar__links {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: hsl(36deg, 100%, 99%);
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .show-nav .navbar__links {
+    width: 65vw;
+    transform: translateX(0);
+  }
+  .navbar__link {
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .show-nav .navbar__link {
+    transform: translateX(0%);
+  }
+  .navbar__link > a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: hsl(236deg, 13%, 42%);
+    transition: all 0.4s ease-in-out;
+  }
+  .navbar__link > a:hover {
+    padding-left: 2rem;
+    letter-spacing: 5px;
+  }
+  /* Toggle menu */
+  .burger {
+    display: block;
+    position: relative;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .bar {
+    display: block;
+    width: 45px;
+    height: 4px;
+    border-radius: 3px;
+    background: hsl(240deg, 100%, 5%);
+    transition: all 0.5s ease-in-out;
+  }
+  .bar::before,
+.bar::after {
+    content: "";
+    width: 45px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: hsl(240deg, 100%, 5%);
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+  }
+  .bar::before {
+    transform: translateY(-12px);
+  }
+  .bar::after {
+    transform: translateY(12px);
+  }
+  .show-nav .bar {
+    width: 0;
+    background: transparent;
+  }
+  .show-nav .bar::before {
+    transform: rotate(45deg);
+  }
+  .show-nav .bar::after {
+    transform: rotate(-45deg);
+  }
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+.hero .brand img {
+  width: 99%;
+}
+.hero .brand .describe {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .hero .brand .describe {
+    flex-direction: column;
+  }
+}
+.hero .brand .describe .title {
+  max-width: 200px;
+  font-weight: 800;
+  font-size: 18px;
+}
+.hero .brand .describe .details {
+  max-width: 350px;
+}
+.hero .brand .describe .details button {
+  background-color: hsl(5deg, 85%, 63%);
+  color: hsl(36deg, 100%, 99%);
+  border: none;
+  padding: 12px 20px;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-block: 1rem;
+}
+.hero .brand .describe .details button:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+.hero .news {
+  background-color: hsl(240deg, 100%, 5%);
+  padding: 1rem;
+}
+.hero .news .new {
+  position: relative;
+  padding-block: 1rem;
+}
+.hero .news .new:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  background-color: hsl(36deg, 100%, 99%);
+}
+.hero .news h2 {
+  color: hsl(35deg, 77%, 62%);
+}
+.hero .news h4 {
+  color: hsl(36deg, 100%, 99%);
+}
+.hero .news h4:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.hero .news p {
+  color: hsl(233deg, 8%, 79%);
+}
+
+.footer {
+  display: flex;
+  margin-block: 3rem;
+}
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+.footer .boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .boxes .box-image img {
+  width: 100px;
+  margin-right: 20px;
+}
+.footer .boxes .best-newsletter .order {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: hsl(233deg, 8%, 79%);
+}
+.footer .boxes .best-newsletter .title {
+  color: hsl(240deg, 100%, 5%);
+  font-weight: 700;
+  margin-block: 1rem;
+}
+.footer .boxes .best-newsletter .title:hover {
+  color: hsl(5deg, 85%, 63%);
+  cursor: pointer;
+}
+.footer .boxes .best-newsletter p {
+  color: hsl(236deg, 13%, 42%);
+  font-size: 12px;
+}/*# sourceMappingURL=style.css.map */
